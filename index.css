@@ -1,0 +1,352 @@
+body {
+    background-color: #12012e;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-demo {
+    width: 14ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 3vw;
+    color: white
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsl(189, 68%, 75%)
+    }
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%, 0%)
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: #12012e;
+    /* background-color: ; */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 72%;
+    border-bottom: 3px solid white;
+    /* border-left: 3px solid white;
+    border-right: 3px solid white; */
+    padding-bottom: 3%;
+    margin-left: 14%;
+    height: 7vh;
+    text-align: center;
+    margin-bottom: 1vh;
+    opacity: 1;
+    /* border: 1px solid black */
+}
+
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding-left: 0;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    color: green;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+#About {
+    width: 70%;
+    margin: 1px solid black;
+    background-color: rgba(146, 33, 33, 0.175);
+    color: #bbb0cf;
+    height: auto;
+    margin-left: 15%;
+    border-radius: 25px;
+    box-shadow: 0 0 8px 1px white;
+    margin-bottom: 5vh;
+    
+}
+
+#about-text {
+    width: 75%;
+    margin-left: 12%;
+    font-size: 2vw;
+    padding-bottom: 5%;
+}
+
+#about-heading {
+    text-align: center;
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+    color: #FFD700;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px black;
+}
+
+#Projects {
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 25px;
+    height: auto;
+    background-color: rgba(146, 33, 33, 0.175);
+    color: white;
+    box-shadow: 0 0 8px 1px white;
+    margin-bottom: 5vh;
+}
+
+#projects-heading {
+    text-align: center;
+    font-size: 3vw;
+    color: #FFD700;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px black;
+}
+
+#projects-text {
+    font-size: 2vw;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-row-gap: 5vw;
+    grid-column-gap: 2vw;
+    grid-template-columns: 50% 50%;
+    width: 70%;
+    margin-left: 5%;
+    grid-auto-columns: 45%;
+    margin-left: 13%;
+    margin-right: 0;
+}
+
+.project-item {
+    height: auto;
+    padding: 0;
+    margin-bottom: 5%;
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    font-size: 1.4vw;
+    box-shadow: 0 0 8px 2px gray;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.project-name {
+    text-align: center;
+    color: #FFD700;
+    border-bottom: 1px solid black;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    text-shadow: 2px 2px 5px #333;
+    background-color: #e34c26;
+}
+
+.project-desc {
+    color: blue
+}
+
+.project-link {
+    text-decoration: none;
+    margin-left: 35%;
+    background-color: #333;
+    width: 25%;
+    height: 40px;
+    border-radius: 50px;
+    margin-bottom: 5%;
+}
+
+.project-link:hover {
+    color: red;
+}
+
+#Skills {
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 25px;
+    height: auto;
+    background-color: rgba(146, 33, 33, 0.175);
+    color: white;
+    box-shadow: 0 0 8px 1px white;
+    margin-bottom: 5vh;
+}
+
+#skills-heading {
+    text-align: center;
+    font-size: 3vw;
+    color: #FFD700;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px black;
+}
+
+#skills-grid {
+    display: grid;
+    grid-row-gap: 5vw;
+    grid-column-gap: 2vw;
+    grid-template-columns: auto auto auto;
+    width: 70%;
+    margin-left: 20%;
+    padding-bottom: 2%;
+}
+
+.skill-item {
+    font-size: 8vw;
+}
+
+.fa-html5 {
+    color: #e34c26
+}
+
+.fa-css3-alt {
+    color: #264de4
+}
+
+.fa-js-square {
+    color: #F0DB4F;
+}
+
+.fa-node {
+    color: #3c873a;
+}
+
+.fa-react {
+    color: #61DBFB;
+}
+
+.fa-cuttlefish {
+    color: #5E97D0;
+}
+
+
+#Experience {
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 25px;
+    height: auto;
+    align-items: center;
+    background-color: rgba(146, 33, 33, 0.175);
+    color: #bbb0cf;
+    box-shadow: 0 0 8px 1px white;
+    margin-bottom: 5vh;
+}
+
+#experience-heading {
+    text-align: center;
+    font-size: 3vw;
+    color: #FFD700;
+    font-weight: bolder;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px black;
+}
+
+#exp-container {
+    width: 75%;
+    margin-left: 12%;
+    font-size: 2vw;
+    padding-bottom: 1%;
+}
+
+#Connect {
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 25px;
+    height:auto;
+    background-color: rgba(146, 33, 33, 0.175);
+    color: #bbb0cf;
+    box-shadow: 0 0 8px 1px white;
+    margin-bottom: 5vh;
+
+}
+
+#connect-heading {
+    text-align: center;
+    font-size: 3vw;
+    color: #FFD700;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px black;
+}
+
+#connect-text {
+    font-size: 2vw;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#connect-icons {
+    width: 70%;
+    padding-left: 42%;
+    padding-bottom: 2%;
+}
+
+.fa-facebook-f {
+    margin-left: 7%;
+    font-size: 2vw;
+    color: #1778f2
+}
+
+.fa-linkedin-in {
+    margin-left: 7%;
+    font-size: 2vw;
+    color: #0077b5
+}
+
+.fa-github {
+    margin-left: 7%;
+    font-size: 2vw;
+    color: white
+}
+
+#mail {
+    padding-left: 40%;
+    font-size: 1.4vw;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 1;
+    padding: 0;
+    width: 75%
+}
